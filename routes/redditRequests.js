@@ -20,12 +20,14 @@ router.get('/', function(req, res, next){
 router.get('/challenge', function(req, res, next){
     var easyReg = /Easy/gi;
     var medium = /Intermediate/gi;
-    var hardReg = /hard/gi;
-    var arr = [];
+    var hardReg = /Hard/gi;
     var daily = r.getSubreddit('dailyprogrammer');
 
-    daily.getTop({"time":"day"}).then(submission => {
-      var fields = submission[0];
+    daily.getHot().then(submissions => {
+      var subsLength = submissions.length;
+      var min = 0;
+      var randomSub = Math.floor(Math.random() *(subsLength - min)) + min;
+      var fields = submissions[randomSub];
       var postTitle = fields.title;
       var postText = fields.selftext;
       var postId = fields.id;
