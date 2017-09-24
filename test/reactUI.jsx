@@ -10,6 +10,9 @@ class App extends React.Component {
        post:''
    }
     }
+    componentDidMount (){
+      document.title="Random r/daily programmer challenge"
+    }
     render() {
         return (
             <div className="container">
