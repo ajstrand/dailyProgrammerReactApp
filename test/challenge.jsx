@@ -49,8 +49,10 @@ class Challenge extends React.Component {
 
       }
         return(
-          <div>
+          <div className="content">
+            <h2>Title</h2>
             <div className="title">{this.state.title}</div>
+            <h2>Challenge details</h2>
             {postArray}
           </div>
       );

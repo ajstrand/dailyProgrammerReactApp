@@ -99,7 +99,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  display:flex;\n  align-items: center;\n  justify-content: center;\n}\nbody {\n  background-color: #34495e;\n  color: #ffffff;\n  width: 70%;\n}\n\ndiv {\n  margin: 15px;\n}\n", ""]);
+	exports.push([module.id, "body {\n  display: -webkit-box;\n display: -moz-box;\n display: -ms-flexbox;\n display: -webkit-flex;\n display: flex;\n justify-content: center;\n\n  background-color: #34495e;\n  color: #ffffff;\n  margin:0;\n}\n\n#app {\n  width: 70%;\n  margin: 15px;\n}\n", ""]);
 
 	// exports
 
@@ -32955,11 +32955,21 @@
 	      }
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'content' },
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Title'
+	        ),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'title' },
 	          this.state.title
+	        ),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Challenge details'
 	        ),
 	        postArray
 	      );

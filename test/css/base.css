@@ -1,14 +1,17 @@
 body {
-  display:flex;
-  align-items: center;
-  justify-content: center;
-}
-body {
+  display: -webkit-box;
+ display: -moz-box;
+ display: -ms-flexbox;
+ display: -webkit-flex;
+ display: flex;
+ justify-content: center;
+
   background-color: #34495e;
   color: #ffffff;
-  width: 70%;
+  margin:0;
 }
 
-div {
+#app {
+  width: 70%;
   margin: 15px;
 }
