@@ -7,6 +7,7 @@
     "webpack-watch": "webpack -w",
     "debug-mode": "node-debug ./app.js",
     "express-server": "node ./app",
+    "start": "node app.js",
     "dev": "concurrent --kill-others \"npm run webpack-watch\" \"npm run express-server\"",
     "debug": "concurrent --kill-others \"npm run webpack-watch\" \"npm run debug-mode\"",
     "test": "echo \"Error: no test specified\" && exit 1"
