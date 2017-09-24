@@ -28,7 +28,6 @@ router.get('/challenge', function(req, res, next){
       var fields = submission[0];
       var postTitle = fields.title;
       var postText = fields.selftext;
-      var split = postText.split("\n");
       var postId = fields.id;
       var challengeObj = {
         text:postText,

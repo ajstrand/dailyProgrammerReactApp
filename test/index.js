@@ -3,6 +3,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from './reactUI';
 ReactDOM.render(
-  <App url="/api/challenge"/>,
+  <App/>,
   document.getElementById('app')
 );
