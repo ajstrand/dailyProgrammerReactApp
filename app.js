@@ -4,9 +4,6 @@ var http = require('http');
 var bodyParser = require('body-parser');
 var helmet = require('helmet')
 
-var index = require('./routes/index');
-var users = require('./routes/users');
-
 var redditRequests = require('./routes/redditRequests');
 
 
@@ -20,9 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-//app.use('/', index);
 app.use('/api', redditRequests);
-//app.use('/users', users);
 
 
 /**
@@ -39,4 +34,5 @@ const server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-server.listen(port, () => console.log(`API running on localhost:${port}`));
+const logMessage = `API running on localhost:${port}`;
+server.listen(port, () => console.log(logMessage));

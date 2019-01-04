@@ -1,13 +1,16 @@
+const path = require('path');
 module.exports = {
-  entry: './test/index.js',
+  entry: './assets/index.js',
   output: {
-    path: './public',
+    path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'
   },
+  mode:'development',
+  devtool:"cheap-eval-source-map",
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js)$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
@@ -15,6 +18,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
+    extensions: ['.js', '.json']
   }
 };
